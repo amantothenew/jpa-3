@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -15,8 +17,6 @@ public class Book {
 
     private  String bookName;
 
-    @ManyToOne
-    //JoinColumn is optional in bidirectional one-to-many
-    @JoinColumn(name = "author_id", referencedColumnName = "id")
-    private Author author;
+    @ManyToMany(mappedBy = "book")
+    private List<Author> author;
 }
