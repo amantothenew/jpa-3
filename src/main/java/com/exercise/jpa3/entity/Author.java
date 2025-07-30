@@ -20,4 +20,8 @@ public class Author {
 
     @ElementCollection
     private List<String> subjects;
+
+    @OneToOne
+    @JoinColumn(name = "book_id", referencedColumnName = "id")
+    private Book book;
 }
