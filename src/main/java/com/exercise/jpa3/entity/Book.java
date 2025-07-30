@@ -15,6 +15,8 @@ public class Book {
 
     private  String bookName;
 
-    @OneToOne(mappedBy = "book")
-    private Author author;
+    //No Reference here make it Unidirectional
+    //Now it is Bidirectional
+//    @ManyToOne()
+//    private Author author;
 }

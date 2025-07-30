@@ -21,7 +21,7 @@ public class Author {
     @ElementCollection
     private List<String> subjects;
 
-    @OneToOne
-    @JoinColumn(name = "book_id", referencedColumnName = "id")
-    private Book book;
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "author_id", referencedColumnName = "id")
+    private List<Book> book;
 }
