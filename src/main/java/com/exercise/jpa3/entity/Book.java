@@ -15,8 +15,8 @@ public class Book {
 
     private  String bookName;
 
-    //No Reference here make it Unidirectional
-    //Now it is Bidirectional
-//    @ManyToOne()
-//    private Author author;
+    @ManyToOne
+    //JoinColumn is optional in bidirectional one-to-many
+    @JoinColumn(name = "author_id", referencedColumnName = "id")
+    private Author author;
 }
