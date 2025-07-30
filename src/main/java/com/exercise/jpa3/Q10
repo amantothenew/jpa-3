@@ -1,0 +1,3 @@
+What does @transactional annotation do?
+
+The @Transactional annotation in Spring lets you easily manage database transactions. When you add it to a method, Spring automatically starts a transaction before the method runs, and then commits it if everything goes well. If something goes wrong, it rolls the transaction back to keep your data consistent.
